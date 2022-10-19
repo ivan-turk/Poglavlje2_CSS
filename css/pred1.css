@@ -1,0 +1,29 @@
+/* Primjer selektora koji dohvaća sve elemente */
+
+* {
+  text-transform: lowercase;
+}
+
+/* Primjer selektora taga */
+h2 {
+  transform: rotate(2deg);
+}
+
+/* Primjer klasnog selektora */
+
+.zabava {
+  text-transform: uppercase;
+}
+
+/* Primjer ID selektora */
+#setanje {
+  text-align: right;
+}
+
+/* Proba selektora sa 2 klase - prvo se izvršava prva pa onda druga!!!! */
+.prva {
+  color: green;
+}
+.druga {
+  color: yellow;
+}

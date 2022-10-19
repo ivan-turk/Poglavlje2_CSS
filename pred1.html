@@ -4,7 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dodavanje unutarnjeg - internal CSS-a unutar head taga -->
+    <style>
+      li {
+        background-color: rgb(115, 200, 100);
+      }
+    </style>
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Dodavanje vanjskog CSS-a -->
+    <link rel="stylesheet" href="./css/pred1.css" />
+
+    <!-- --------------------------------------- -->
+
     <title>Predavanje 1 - CSS</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Linijski unos CSS - inline -->
+    <h1 style="color: rgb(116, 104, 247)">CSS inline</h1>
+    <!-- -------------------------- -->
+    <hr />
+
+    <h2>Načini unosa CSS-a u html file external</h2>
+    <hr />
+    <ul>
+      <li>Linijski (inline)</li>
+      <li>Unutarnji (internal)</li>
+      <li>Vanjski (external)</li>
+    </ul>
+    <hr />
+    <!-- -------------------------------------------------- -->
+
+    <!-- Selektori atributa preko klase "zabava" -->
+
+    <h2>Načini zabave:</h2>
+    <hr />
+    <ul class="zabava">
+      <li class="prva druga">programiranje</li>
+      <li>učenje</li>
+      <li>šetnja</li>
+    </ul>
+    <hr />
+    <br />
+
+    <!-- Selektor za klasu još primjera -->
+
+    <a href="https://www.youtube.com/watch?v=x8rt_zEt91Q&list=RDMMx8rt_zEt91Q&start_radio=1" class="zabava">pogledaj ovaj video</a>
+    <br />
+    <hr />
+
+    <!-- ------------------------------------------------------------------ -->
+
+    <!-- Selektor po ID-u -->
+
+    <h2>Načini zabave:</h2>
+
+    <ul class="zabava">
+      <li>programiranje</li>
+      <li>učenje</li>
+      <li id="setanje">šetsnje</li>
+    </ul>
+    <hr />
+    <br />
+  </body>
 </html>
