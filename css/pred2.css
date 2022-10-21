@@ -1,0 +1,126 @@
+/*1. JEDNOSTAVNI SELEKTORI */
+
+/* Univerzalnim selektorom napraviš kill browserovih defaultnih postavki da možeš pisati css od nule!!, ima puno css reset skripti za pisanje... primjer: */
+
+/* Box sizing - izračun dimenzija elemenata se stavlja do bordera..... border + padding + element */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Bold je inline element te mu ne možeš zapovijedati sa širinom, visinom ali ga možeš staviti u display inline block... razlika između inline elementa i display inline bloka je ta da dozvoljava da mu specificiraš visinu,širinu itd... */
+
+b {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border: 5px solid black;
+}
+
+body {
+  background-color: bisque;
+}
+
+/* Viewport height - prostor koji se iscrtava stranica */
+header {
+  height: 15vh;
+  background-color: aquamarine;
+}
+
+main {
+  min-height: 70vh;
+}
+
+footer {
+  height: 15vh;
+  background-color: aquamarine;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Nakon prve pauze - grupni selektori */
+
+h1 {
+  color: brown;
+}
+
+/* Prozirnost u bojama - dodaje se samo u rgbA, kao 4-ti parametar od 0-1 decimalno */
+h2 {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+/* Naslovi na centar */
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Overwrite h1 - ono koje je zadnje stavljeno (kada je isti tip selektora) */
+
+h1 {
+  color: purple;
+}
+
+/* External i internal su na jednakom levelu, pobjeđuje onaj koji je kasnije napisan, dok inline ima prednost nad svima! */
+/* ---------------------------------------------------------------------------------------------- */
+
+/*2. SLOŽENI SELEKTORI */
+
+/* 2.1  SELEKTORI ATRIBUTA - pohvatati će sve elemente koji imaju neki atribut na nekoj vrijednosti */
+
+/* a) Svi atributi koji imaju naziv href nek se primjeni ovo pravilo */
+
+[href] {
+  font-style: italic;
+}
+
+/* b) Atributi koji u sebi imaju ID 'osimi' */
+[href="#osimi"] {
+  font-size: 30px;
+}
+
+/* c) CSS Atribut - Vrijednost selektor! - mora biti riječ odvojena od drugih, ne traži cijeli string, bez crtica, samo razmak.. */
+
+[hhh~="vodi"] {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* d) ovajaš sa  crticom i tražiš samo tu klasu sa crticom...
+*/
+
+[class|="header"] {
+  color: rgb(190, 190, 92);
+}
+
+/* e) počinje sa riječi */
+[class^="header"] {
+  transform: rotateY(50deg);
+}
+
+/* f) Pravilo na određene završetke slova */
+[hhh$="nama"] {
+  color: rgb(124, 56, 243);
+}
+
+/* g) Pravilo dohvaćanja preko atributa sa kombinacijom slova sa crticom*/
+
+[hhh*="iv-di"] {
+  font-style: italic;
+}
+
+/* h) Dohvaćanje */
+
+[id$="ma"] {
+  color: blue;
+}
+
+section.pavi {
+  text-decoration: underline;
+}
