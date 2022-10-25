@@ -1,0 +1,143 @@
+/* 1. SELEKTORI PSEUDOKLASE - bitan je redosljed kod linkova da bi moglo raditi ispravno */
+
+/* unvisited link */
+a:link {
+  color: #ff0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00ff00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ff00ff;
+}
+
+/* selected link */
+a:active {
+  color: #0000ff;
+}
+
+/* Može se staviti i hover na header! */
+header:hover {
+  color: #ff00ff;
+}
+
+/* Pseudoklase firstchild, lastchild - hvata se prvo dijete svoga oca */
+
+/* Kontekstualni selektori se čitaju obrnuto */
+
+/*  p i:first child  - dohvati mi sve italice koji su prva djeca svog roditelja a usto je i dijete paragrafa - gledaju se samo html elementi*/
+
+/* TABLICA za hvatanje neparnih */
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Neparni elementi */
+tr:nth-child(2n + 1) {
+  background-color: aqua;
+}
+
+/* Parni elementi */
+
+tr:nth-child(2n) {
+  background-color: rgb(255, 215, 215);
+}
+
+img:last-child {
+  width: 100%;
+}
+
+/* Dohvati mi sve slike koje nisu slike koje su zadnje dijete svog roditelja */
+
+img:not(img:last-child) {
+  width: 50%;
+}
+
+/* Dohvati mi sve paragrafe koji su prvi tog tipa u svome roditelju, a koji nije drugo dijete tog roditelja */
+
+p:first-of-type:not(p:nth-child(2)) {
+  background-color: aquamarine;
+}
+
+/* Dohvaćeno je dijete prvog elementa h1  */
+
+h1:nth-child(1) {
+  background-color: brown;
+}
+
+/* Pseudoklase dohvaćaju neki element u odnosu na stanje nekog elementa (npr na hoover) */
+
+/* ------------------PSEUDOELEMENTI---------------- */
+
+/* Dohvaćaš stvari koji nisu html elementi npr <p>Blabal</p> (Blabla nije html element).... stavljaju se dvije dvotočke */
+
+/* 
+a) First line - primjenjuje se na prvi red u browseru koliko god rastezao toliko će biti primjenjeno (možeš odvojiti sa br tagom)
+
+b) First letter - prvo slovo se modificira
+
+c) before i after - ubaci prije neku stvar ili poslije, ne može se selektirati (ubacuješ ispred ili iza elementa).
+
+*/
+
+.biti-ce-u-provjeri::after {
+  content: "Biti će u provjeri";
+  background-color: red;
+  margin-left: 5px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  height: 10px;
+  line-height: 10px;
+  font-size: 8px;
+}
+
+/* d) ::marker */
+
+::marker {
+  content: "#";
+  font-size: 30px;
+}
+
+/* e) ::selection */
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+/* NAJTEŽI DIO - Relacijski selektori ili kombinatori !!!!
+
+a) Descendant selector (space)
+
+main dt - (dohvati mi sve tdove kojima je predak main)
+*/
+
+main dt {
+  background-color: blue;
+}
+
+/* b) Child selector -  Svim dt-ovima kojima je otac dl neka bude purple */
+
+dl > st {
+  color: green;
+}
+
+/* c) Adjacent sibling selector (+)   */
+
+div + div {
+  transform: rotateZ(30deg);
+}
+
+/* d) General sibling selector (~) */
