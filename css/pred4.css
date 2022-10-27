@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Important svojstvo pobjeđuje čak i inline, ali ne treba ga koristiti skoro pa nikad */
+
+p {
+  color: red !important;
+}
+
+/* Razine selektora prema specifičnosti.... pobjeđuje po ID-u.. najjači je selektor id-a, pa klasni, pa onda najslabiji tag */
+a {
+  background-color: aqua;
+}
+
+.link1 {
+  background-color: blue;
+}
+
+#link1 {
+  background-color: black;
+}
+
+/* important je najjači, inline odmah iza njega, pa prioriteti selektora (id selektor, pseudoklase, selektori atributa i klasa, običan tag */
+
+/* BOX MODEL - VRLO BITNO */
+
+div {
+  background-color: cornflowerblue;
+  padding: 10px;
+
+  /* Možeš staviti 4 vrijednosti u padding..pratiš kao sad...gore desno dolje lijevo.. pravilo vrijedi i za margine! */
+}
+
+/* Vertical-align se odnosi samo na INLINE ELEMENTE!!!!!!!! - To je vezano za Control flow */
+
+/* Domaći - po našem izboru, složi sam po važnostima selektora */
