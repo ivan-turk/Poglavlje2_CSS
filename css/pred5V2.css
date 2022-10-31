@@ -1,0 +1,86 @@
+/* Relativno pozicioniranje */
+/* Kad staviš position relative on ostavi zauzetu poziciju toka dokumenta i iscrta se tamo gdje smo ga stavili */
+
+.relativno {
+  background-color: aqua;
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
+
+/* Absolutna pozicija - pozicionira se apsolutno u odnosu na svog prvog pozicioniranog roditelja (ne statičnog pretka) */
+
+.apsolutni1,
+.apsolutni2 {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.apsolutni1 {
+  background-color: chocolate;
+}
+
+.apsolutni2 {
+  background-color: rgb(169, 28, 176);
+}
+
+/* Position fixed - element je postavljen u odnosu na prozor preglednika - izbacuje se iz toka dokumenta! */
+
+.fixni {
+  position: fixed;
+  right: 0px;
+  bottom: 100px;
+  background-color: bisque;
+}
+
+/* Position sticky - kad pređeš scrollom preko viewporta, onda se on zakači.. prvo se iscrta normalno, a kada ga pređeš sa scrolom onda se zaljepi i prati... */
+
+.sticky {
+  background-color: rgb(239, 138, 8);
+  position: sticky;
+  bottom: 50px;
+}
+
+/* Z-index - preklapanje elemenata - radi samo na pozicioniranim elementima koji nisu static!!! - ako su jednaki z indexi onda se gleda document flow(tok dokumenta) te će zadnji element u html kodu biti naprijed */
+
+/* Overflow visible, scroll, hidden, auto - property kad je veličina elementa veća od svog boxa...postoje 2 overflowa, po x i po y osi ako ćeš specificirati posebna pravila*/
+
+/* Float - ako imaš sliku unutar paragrafa možeš baciti sliku desno,lijevo... float se više ne koristi kao niti clear */
+
+/* --------------------------------------------------------- */
+
+/* LAYOUT GLAVNI - RADI SE U FLEXBOXU I GRIDU */
+
+/* 1. Flexbox layout -  */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  width: 100%;
+}
+
+.flex-container > div:first-of-type {
+  width: 50%;
+  background-color: bisque;
+}
+
+/* ------------------------ */
+.inline-flex-container {
+  display: inline-flex;
+}
+
+.flex-container1 {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap nowrap;
+}
+
+.obojan {
+  width: 10%;
+  background-color: blue;
+}
