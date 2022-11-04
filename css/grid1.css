@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 20% 40% 40%;
+}
+
+/* Pozicioniranje elemenata po linijama u matricu */
+header {
+  background-color: aqua;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+section {
+  background-color: rgb(39, 146, 73);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+article:nth-last-of-type(1) {
+  background-color: rgb(149, 173, 44);
+}
+
+article:nth-last-of-type(2) {
+  background-color: rgb(75, 89, 12);
+}
+
+article:nth-last-of-type(3) {
+  background-color: rgb(182, 217, 96);
+}
+
+div > div {
+  background-image: url(../multimedia/HNK_Hajduk_Split.svg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Postavljanje area */

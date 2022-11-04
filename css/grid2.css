@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* #wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-areas:
+    "header header header"
+    "sidebar glv glv"
+    "sidebar vj1 vj2";
+} */
+
+/* Složenije postavljanje grid-a odnosno shorthand, bolje posebno ovo gore pisati! */
+
+#wrapper {
+  display: grid;
+  height: 100vh;
+
+  /* Izbjegavaj kod grid-templatea postotke, koristi frakcije zbog scrolla - koristi čisti gap a ne grid-gap */
+  grid-template: "header header header" 20% "sidebar glv glv" 40% "sidebar vj1 vj2" 40%;
+  row-gap: 10px;
+  column-gap: 15px;
+  padding: 10px;
+
+  /* Poravnavnanje po horizontali i vertikali */
+  justify-items: flex-end;
+  align-items: center;
+
+  /* Shorthand za place items justify i align u jednom */
+  place-items: center / flex-end;
+}
+
+/* Pozicioniranje elemenata po Area-ma u matricu */
+header {
+  background-color: aqua;
+  grid-area: header;
+  width: 50%;
+  height: 50%;
+}
+
+section {
+  background-color: rgb(39, 146, 73);
+  grid-area: sidebar;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-last-of-type(1) {
+  background-color: rgb(149, 173, 44);
+  grid-area: glv;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-last-of-type(2) {
+  background-color: rgb(75, 89, 12);
+  grid-area: vj1;
+  width: 50%;
+  height: 50%;
+}
+
+article:nth-last-of-type(3) {
+  background-color: rgb(182, 217, 96);
+  grid-area: vj2;
+  width: 50%;
+  height: 50%;
+}
+
+/* Postoje i gapovi! Column gap i row gap */
+/* Justify content - pomočeš matricu po horizontalnoj osi!
+Align content je po vertikali poravnavati */
+
+/* Grid auto columns - vrlo bitno! */
