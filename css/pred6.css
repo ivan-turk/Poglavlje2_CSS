@@ -1,0 +1,104 @@
+/* Svojstva kontejnera */
+
+.container3 {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: aqua;
+  margin: 20px;
+  gap: 20px;
+}
+.container3 > div {
+  background-color: coral;
+  flex-basis: 30%;
+}
+
+.container1 {
+  display: flex;
+  height: 200px;
+  flex-flow: row wrap;
+  background-color: aqua;
+  margin: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container1 > div {
+  background-color: coral;
+  flex-basis: 40%;
+}
+
+.container2 {
+  background-color: aqua;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px;
+  height: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container2 > div {
+  background-color: coral;
+  flex-basis: 30%;
+}
+
+/* Svojstva Itema */
+/* --------------------------------------------- */
+
+/* dohvati prvo item složenim selektorom */
+
+/* Items order - koji je prvi! */
+
+.container3 > div:nth-child(5) {
+  order: -1;
+  flex-grow: 1;
+}
+
+.container3 > div:nth-child(2) {
+  order: 1;
+  flex-grow: 1;
+}
+
+/* a) Flex grow - određujemo koliko će neki item narasti ako ima mogućnost rasti, default je 0 */
+
+/* 
+Izračunavanje po koeficijentu rasta:
+
+______________________________________
+500px ->praznine ostalo
+4 elementa--> 0 2 1 2 (koeficijenti rasta)
+zbroje se svi koeficijenti = 5
+500/5= 100px
+
+prvi će narasti 0px
+drugi 200px
+treći 100px
+četvrti 200px
+
+*/
+
+/* b) Flex-shrink - koliko će se neki element skupljati, po defaultu je 1
+
+Ako je dozvoljen prelazak u novi red onda se neće smanjivati, ako nije dozvoljen onda se može smanjivati...primjer container 4*/
+
+.container4 {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: aqua;
+  margin: 20px;
+  gap: 20px;
+}
+.container4 > div {
+  background-color: coral;
+  flex-basis: 30%;
+}
+
+/* Nastaviti ovo gore sa predavanja - nezavršeno!! */
+
+/* ___________________________________________________________ */
+
+/* Flex kombinirano svojstvo, prima 3 value-a - flex-grow, flex-shrink i flex-basis */
+
+/* Align self property */
+
+/* Zadatak - napravi po volji stranicu, glavni layout napravljen sa flexboxom! */

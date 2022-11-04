@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: bisque;
+  justify-content: space-between;
+  row-gap: 40px;
+  column-gap: 20px;
+}
+
+header {
+  display: flex;
+  flex-basis: 100%;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(159, 187, 66);
+  height: 5vh;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  justify-content: space-evenly;
+  height: 70vh;
+  row-gap: 40px;
+}
+
+.a1 {
+  flex-basis: 45%;
+  background-color: rgb(255, 170, 127);
+}
+.a2 {
+  flex-basis: 45%;
+  background-color: rgb(159, 187, 66);
+}
+.a3 {
+  flex-basis: 45%;
+  background-color: rgb(255, 170, 127);
+}
+.a4 {
+  flex-basis: 45%;
+  background-color: rgb(159, 187, 66);
+}
+
+.a5 {
+  flex-basis: 45%;
+  background-color: rgb(255, 170, 127);
+}
+
+.a6 {
+  flex-basis: 45%;
+  background-color: rgb(159, 187, 66);
+}
+
+footer {
+  display: flex;
+  flex-basis: 100%;
+  background-color: rgb(159, 187, 66);
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  height: 5vh;
+}
